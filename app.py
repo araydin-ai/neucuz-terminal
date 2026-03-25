@@ -239,42 +239,42 @@ with st.container():
 
 st.markdown("""
 <div class="custom-footer">
-    <div class="footer-grid">
-        <div class="footer-col">
-            <h4><span style="color:white;">Ne</span><span style="color:#ff8a00;">Ucuz</span></h4>
-            <p>NeUcuz, piyasa döngülerini doğru okumaya odaklanan, şeffaf paylaşımlar yapan bir finansal analiz topluluğudur.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Navigasyon</h4>
-            <p>Ana Sayfa</p>
-            <p>Terminal (Platform)</p>
-            <p>Özellikler</p>
-            <p>SSS</p>
-        </div>
-        <div class="footer-col">
-            <h4>Kaynaklar</h4>
-            <p>Telegram Kanalı</p>
-            <p>X Paylaşımları</p>
-            <p>Eğitimler</p>
-        </div>
-        <div class="footer-col">
-            <h4>Hızlı Destek</h4>
-            <p>Analizler, platform veya topluluğumuz hakkında her türlü sorunuz için resmi mail adresimiz üzerinden bize ulaşabilirsiniz.</p>
-            <br>
-            <p style="color: #ff8a00;">✉️ destek@neucuz.com.tr</p>
-        </div>
-    </div>
-    
-    <div style="background-color: #1a1e29; border-radius: 12px; padding: 24px; color: #8fa3b0; font-size: 0.8rem; line-height: 1.6; margin-bottom: 30px; border: 1px solid #222631;">
-        Burada yer alan bilgi, yorum ve tavsiyeler yatırım danışmanlığı kapsamında değildir. Yatırım danışmanlığı hizmeti, aracı kurumlar, portföy yönetim şirketleri, mevduat kabul etmeyen bankalar ile müşteri arasında imzalanacak yatırım danışmanlığı sözleşmesi çerçevesinde sunulmaktadır. Bu sayfada yazılanlar sadece kişisel görüşlerdir ve mali durumunuz ile risk-getiri tercihlerinize uygun olmayabilir. Bu nedenle bu sayfada yer alan bilgi ve yazılara dayanarak yatırım yapılmamalıdır.
-    </div>
-    
-    <div class="copyright-row">
-        <div>© 2026 NeUcuz. Tüm hakları saklıdır.</div>
-        <div style="display: flex; gap: 20px;">
-            <span>İletişim</span>
-            <span>SSS</span>
-        </div>
-    </div>
+<div class="footer-grid">
+<div class="footer-col">
+<h4><span style="color:white;">Ne</span><span style="color:#ff8a00;">Ucuz</span></h4>
+<p>NeUcuz, piyasa döngülerini doğru okumaya odaklanan, şeffaf paylaşımlar yapan bir finansal analiz topluluğudur.</p>
+</div>
+<div class="footer-col">
+<h4>Navigasyon</h4>
+<p>Ana Sayfa</p>
+<p>Terminal (Platform)</p>
+<p>Özellikler</p>
+<p>SSS</p>
+</div>
+<div class="footer-col">
+<h4>Kaynaklar</h4>
+<p>Telegram Kanalı</p>
+<p>X Paylaşımları</p>
+<p>Eğitimler</p>
+</div>
+<div class="footer-col">
+<h4>Hızlı Destek</h4>
+<p>Analizler, platform veya topluluğumuz hakkında her türlü sorunuz için resmi mail adresimiz üzerinden bize ulaşabilirsiniz.</p>
+<br>
+<p style="color: #ff8a00;">✉️ destek@neucuz.com.tr</p>
+</div>
+</div>
+
+<div style="background-color: #1a1e29; border-radius: 12px; padding: 24px; color: #8fa3b0; font-size: 0.8rem; line-height: 1.6; margin-bottom: 30px; border: 1px solid #222631;">
+Burada yer alan bilgi, yorum ve tavsiyeler yatırım danışmanlığı kapsamında değildir. Yatırım danışmanlığı hizmeti, aracı kurumlar, portföy yönetim şirketleri, mevduat kabul etmeyen bankalar ile müşteri arasında imzalanacak yatırım danışmanlığı sözleşmesi çerçevesinde sunulmaktadır. Bu sayfada yazılanlar sadece kişisel görüşlerdir ve mali durumunuz ile risk-getiri tercihlerinize uygun olmayabilir. Bu nedenle bu sayfada yer alan bilgi ve yazılara dayanarak yatırım yapılmamalıdır.
+</div>
+
+<div class="copyright-row">
+<div>© 2026 NeUcuz. Tüm hakları saklıdır.</div>
+<div style="display: flex; gap: 20px;">
+<span>İletişim</span>
+<span>SSS</span>
+</div>
+</div>
 </div>
 """, unsafe_allow_html=True)
