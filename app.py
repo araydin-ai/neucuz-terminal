@@ -73,7 +73,7 @@ st.markdown('<div class="hero-subtitle">NeUcuz ile teknik ve temel analizi tek b
 col1, col2, col3 = st.columns([2, 1, 2])
 with col2:
     # Kullanıcıyı pages/1_Terminal.py dosyasına yönlendiren Streamlit butonu
-    st.page_link("pages/1_Terminal.py", label="🚀 Terminali Ücretsiz Başlat", use_container_width=True)
+    st.page_link("pages/1_terminal.py", label="🚀 Terminali Ücretsiz Başlat", use_container_width=True)
 
 st.markdown("<br><br><br>", unsafe_allow_html=True)
 
