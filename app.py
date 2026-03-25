@@ -242,14 +242,14 @@ st.markdown("""
     <div class="footer-grid">
         <div class="footer-col">
             <h4><span style="color:white;">Ne</span><span style="color:#ff8a00;">Ucuz</span></h4>
-            <p>NeUcuz, piyasa döngülerini doğru okumaya odaklanan, yapay zeka destekli profesyonel bir finans terminali ve trader asistanıdır.</p>
+            <p>NeUcuz, piyasa döngülerini doğru okumaya odaklanan, şeffaf paylaşımlar yapan bir finansal analiz topluluğudur.</p>
         </div>
         <div class="footer-col">
             <h4>Navigasyon</h4>
             <p>Ana Sayfa</p>
-            <p>Terminal</p>
+            <p>Terminal (Platform)</p>
             <p>Özellikler</p>
-            <p>Yapay Zeka SSS</p>
+            <p>SSS</p>
         </div>
         <div class="footer-col">
             <h4>Kaynaklar</h4>
@@ -259,19 +259,22 @@ st.markdown("""
         </div>
         <div class="footer-col">
             <h4>Hızlı Destek</h4>
-            <p>Platformumuz hakkında her türlü sorunuz için resmi mail adresimiz üzerinden bize ulaşabilirsiniz.</p>
+            <p>Analizler, platform veya topluluğumuz hakkında her türlü sorunuz için resmi mail adresimiz üzerinden bize ulaşabilirsiniz.</p>
             <br>
             <p style="color: #ff8a00;">✉️ destek@neucuz.com.tr</p>
         </div>
     </div>
     
-    <div class="disclaimer-box">
-        <b>YASAL UYARI:</b> Burada yer alan yatırım bilgi, yorum ve tavsiyeleri yatırım danışmanlığı kapsamında değildir. Yatırım danışmanlığı hizmeti, aracı kurumlar, portföy yönetim şirketleri, mevduat kabul etmeyen bankalar ile müşteri arasında imzalanacak yatırım danışmanlığı sözleşmesi çerçevesinde sunulmaktadır. Bu platformda üretilen yapay zeka çıktıları, indikatör sinyalleri ve yazılanlar sadece kişisel görüşlere ve algoritmik hesaplamalara dayanmaktadır. Bu görüşler mali durumunuz ile risk ve getiri tercihlerinize uygun olmayabilir. Bu nedenle, sadece burada yer alan bilgilere dayanılarak yatırım kararı verilmesi beklentilerinize uygun sonuçlar doğurmayabilir.
+    <div style="background-color: #1a1e29; border-radius: 12px; padding: 24px; color: #8fa3b0; font-size: 0.8rem; line-height: 1.6; margin-bottom: 30px; border: 1px solid #222631;">
+        Burada yer alan bilgi, yorum ve tavsiyeler yatırım danışmanlığı kapsamında değildir. Yatırım danışmanlığı hizmeti, aracı kurumlar, portföy yönetim şirketleri, mevduat kabul etmeyen bankalar ile müşteri arasında imzalanacak yatırım danışmanlığı sözleşmesi çerçevesinde sunulmaktadır. Bu sayfada yazılanlar sadece kişisel görüşlerdir ve mali durumunuz ile risk-getiri tercihlerinize uygun olmayabilir. Bu nedenle bu sayfada yer alan bilgi ve yazılara dayanarak yatırım yapılmamalıdır.
     </div>
     
     <div class="copyright-row">
-        <div>© 2026 NeUcuz. Tüm hakları saklıdır. | Selçuk Üniversitesi Bilgisayar Mühendisliği Projesi</div>
-        <div>İletişim &nbsp;&nbsp; SSS &nbsp;&nbsp; Aydınlatma Metni</div>
+        <div>© 2026 NeUcuz. Tüm hakları saklıdır.</div>
+        <div style="display: flex; gap: 20px;">
+            <span>İletişim</span>
+            <span>SSS</span>
+        </div>
     </div>
 </div>
 """, unsafe_allow_html=True)
