@@ -90,14 +90,40 @@ def main():
 
         # --- 3. BİLGİ KARTI ---
         son_fiyat = df['close'].iloc[-1]
-        ilk_fiyat = df['close'].iloc[0] # Seçilen periyodun başındaki fiyat
-        degisim = ((son_fiyat - ilk_fiyat) / ilk_fiyat) * 100
-        color_code = "green" if degisim > 0 else "red"
+        ilk_fiyat = df['close'].iloc[0]
+        degisim_yuzde = ((son_fiyat - ilk_fiyat) / ilk_fiyat) * 100
+        fiyat_farki = son_fiyat - ilk_fiyat
         
-        st.markdown(f"""
-        ### {secilen_kod} - {varlik_adi} <span style='color:{color_code}; font-size:0.8em'>({son_fiyat:.2f} / %{degisim:.2f})</span>
-        <span style='font-size:0.8em; color:gray'>Periyot: {zaman_secimi}</span>
-        """, unsafe_allow_html=True)
+        son_hacim = df['volume'].iloc[-1] if 'volume' in df.columns else 0
+        
+        st.markdown(f"### {secilen_kod} - {varlik_adi}")
+        
+        m_col1, m_col2, m_col3 = st.columns(3)
+        
+        with m_col1:
+            st.metric(
+                label="Son Fiyat", 
+                value=f"{son_fiyat:,.2f}", 
+                delta=f"{fiyat_farki:,.2f} ({degisim_yuzde:+.2f}%)"
+            )
+            
+        with m_col2:
+            st.metric(
+                label="Periyot Analizi", 
+                value=zaman_secimi,
+                delta="Zaman Aralığı",
+                delta_color="off"
+            )
+            
+        with m_col3:
+            st.metric(
+                label="İşlem Hacmi (Son)", 
+                value=f"{son_hacim:,.0f}" if son_hacim > 0 else "Veri Yok",
+                delta="Güncel Bar",
+                delta_color="off"
+            )
+            
+        st.markdown("<br>", unsafe_allow_html=True)
 
         # --- 4. RENDER ---
         has_volume = "Hacim" in secilen_indikatorler
