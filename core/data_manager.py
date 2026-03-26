@@ -14,16 +14,14 @@ class StockDataManager:
         """
         symbol = symbol.strip().upper()
         
-        # Sadece BIST sembolleri için .IS uzantısı ekliyoruz.
-        # Kripto (BTC-USD), Emtia (GC=F) ve ABD (AAPL) sembolleri
-        # market_symbols.py dosyasından zaten hazır formatta geliyor.
+        # Yahoo finance türk hisselerini .IS ile tanır
         if market_type == "BIST":
             return f"{symbol}.IS"
         
         return symbol
 
     @staticmethod
-    @st.cache_data(ttl=3600)
+    @st.cache_data(ttl=3600) # Hız ve API limitlerine takılmamak için 1 saat cache'de tutar
     def get_history(symbol: str, period: str, market_type: str = "BIST") -> pd.DataFrame | None:
         """
         Belirtilen sembol, periyot ve piyasa türü için hisse verisini çeker ve formatlar.

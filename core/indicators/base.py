@@ -1,14 +1,9 @@
 from abc import ABC, abstractmethod
 import pandas as pd
-
+# Her indikatörün miras almak zorunda olacağı indikatör soyut sınıfımız,böylece OOP'ye uygun bir mimari kurdum
 class Indicator(ABC):
-    """
-    Tüm indikatörler için soyut temel sınıf (Abstract Base Class).
-    """
+
     @abstractmethod
     def calculate(self, df: pd.DataFrame) -> list[dict]:
-        """
-        Verilen DataFrame üzerinde indikatörü hesaplar ve
-        lightweight-charts formatında bir liste (series configuration) döndürür.
-        """
+       # Yine tüm indikatörler için overwrite edilmesi zorunlu bir hesaplama fonksiyonu.Bu fonksiyon lightweightcharts kütüphanesine uygun çıktı üretir(liste).
         pass

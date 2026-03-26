@@ -4,15 +4,11 @@ import pandas as pd
 
 class AIAgent:
     def __init__(self):
-        """
-        AI Ajanını başlatır. API anahtarını .streamlit/secrets.toml dosyasından alır.
-        """
-        try:
-            # Streamlit secrets üzerinden güvenli erişim
+        try: # try except yapısı sayesinde hata durumunda mesaj fırlatılır
+            # Streamlit secrets içinde google API key aranır
             if "GOOGLE_API_KEY" in st.secrets:
                 api_key = st.secrets["GOOGLE_API_KEY"]
                 genai.configure(api_key=api_key)
-                # 1M token context window ile tüm veri geçmişini alabiliriz
                 self.model = genai.GenerativeModel('gemini-2.5-flash')
             else:
                 st.error("Google API Anahtarı bulunamadı! Lütfen .streamlit/secrets.toml dosyasını kontrol edin.")
@@ -28,11 +24,11 @@ class AIAgent:
         if not self.model:
             return "Yapay zeka modeli aktif değil. API anahtarını kontrol edin."
 
-        # 1. VERİ HAZIRLIĞI (SINIRSIZ)
+        
         if df is None or df.empty:
             data_context = "Elimizde güncel veri yok."
         else:
-            # DataFrame'i CSV formatına çevir (LLM'ler CSV'yi çok iyi okur)
+            # DataFrame'i CSV formatına çeviriyoruz çünkü LLM'e tabloyu metin olarak sunmamız lazım
             # index=True diyerek tarihleri de alıyoruz.
             full_data_csv = df.to_csv(index=True)
             
